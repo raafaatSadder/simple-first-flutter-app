@@ -1,6 +1,6 @@
 import 'package:coffee_card/coffee_prefs.dart';
-import 'package:coffee_card/drink_card.dart';
-import 'package:coffee_card/home.dart';
+import 'package:coffee_card/reusabul%20widget/drink_card.dart';
+import 'package:coffee_card/screens/customize_drink.dart';
 import 'package:coffee_card/reusabul%20widget/app_scaffold.dart';
 import 'package:coffee_card/reusabul%20widget/styled_body_text.dart';
 import 'package:coffee_card/reusabul%20widget/styled_button.dart';
@@ -12,7 +12,6 @@ class Drinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      title: 'my coffee app',
       body: Column(
         children: [
           DrinkCard(name: "Americano", path: 'assets/img/americano.png'),

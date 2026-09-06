@@ -1,10 +1,10 @@
-import 'package:coffee_card/drinks.dart';
+import 'package:coffee_card/screens/drinks.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
+
+import 'screens/customize_drink.dart';
+
 void main() {
-  runApp(MaterialApp(
-    home: Drinks()
-  ));
+  runApp(MaterialApp(home: Drinks()));
 }
 
 class Sandbox extends StatelessWidget {
@@ -21,28 +21,13 @@ class Sandbox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        Container(
-          width: 100,
-          color: Colors.red,
-          child: Text("one"),
-        ),Container(
-          width: 150,
-          color: Colors.green,
-          child: Text("one"),
-        ),Container(
-          width: 200,
-          color: Colors.blue,
-          child: Text("one"),
-        ),Container(
-          width: 250,
-          color: Colors.pink,
-          child: Text("one"),
-        ),Container(
-          width: 300,
-          color: Colors.red,
-          child: Text("one"),
-        )
-      ],),
+          Container(width: 100, color: Colors.red, child: Text("one")),
+          Container(width: 150, color: Colors.green, child: Text("one")),
+          Container(width: 200, color: Colors.blue, child: Text("one")),
+          Container(width: 250, color: Colors.pink, child: Text("one")),
+          Container(width: 300, color: Colors.red, child: Text("one")),
+        ],
+      ),
     );
   }
 }
