@@ -1,5 +1,6 @@
 import 'package:coffee_card/coffee_prefs.dart';
-import 'package:coffee_card/styled_body_text.dart';
+import 'package:coffee_card/reusabul%20widget/app_scaffold.dart';
+import 'package:coffee_card/reusabul%20widget/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
 
@@ -8,12 +9,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("my coffee app",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-        backgroundColor: Colors.brown[700],
-        centerTitle: true,
-      ),
+    return AppScaffold(
+      title: 'my coffee app',
       body:Column(crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(

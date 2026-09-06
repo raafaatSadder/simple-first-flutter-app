@@ -1,8 +1,9 @@
+import 'package:coffee_card/drinks.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 void main() {
   runApp(MaterialApp(
-    home: Home()
+    home: Drinks()
   ));
 }
 
