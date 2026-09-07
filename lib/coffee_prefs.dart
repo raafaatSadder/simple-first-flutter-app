@@ -1,9 +1,11 @@
 import 'package:coffee_card/reusabul%20widget/styled_body_text.dart';
 import 'package:coffee_card/reusabul%20widget/styled_button.dart';
+import 'package:coffee_card/screens/order_confirmation.dart';
 import 'package:flutter/material.dart';
 
 class CoffeePrefs extends StatefulWidget {
-  const new({super.key});
+  final String drink;
+  const new({super.key, required this.drink});
 
   @override
   State<CoffeePrefs> createState() => _CoffeePrefsState();
@@ -12,6 +14,7 @@ class CoffeePrefs extends StatefulWidget {
 class _CoffeePrefsState extends State<CoffeePrefs> {
   int strength = 1;
   int sugars = 1;
+  // late String drink;
 
   void increaseStrength() {
     setState(() {
@@ -59,6 +62,21 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
             Expanded(child: SizedBox()),
             StyledButton(onPressed: increaseSugar, child: Text('+')),
           ],
+        ),
+        StyledButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => OrderConfirmation(
+                  drink: widget.drink,
+                  strength: strength,
+                  suger: sugars,
+                ),
+              ),
+            );
+          },
+          child: Text("confirm"),
         ),
       ],
     );

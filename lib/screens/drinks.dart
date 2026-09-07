@@ -1,9 +1,5 @@
-import 'package:coffee_card/coffee_prefs.dart';
 import 'package:coffee_card/reusabul%20widget/drink_card.dart';
-import 'package:coffee_card/screens/customize_drink.dart';
 import 'package:coffee_card/reusabul%20widget/app_scaffold.dart';
-import 'package:coffee_card/reusabul%20widget/styled_body_text.dart';
-import 'package:coffee_card/reusabul%20widget/styled_button.dart';
 import 'package:flutter/material.dart';
 
 class Drinks extends StatelessWidget {

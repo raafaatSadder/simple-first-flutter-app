@@ -1,13 +1,17 @@
-import 'package:coffee_card/coffee_prefs.dart';
 import 'package:coffee_card/reusabul%20widget/app_scaffold.dart';
 import 'package:coffee_card/reusabul%20widget/styled_body_text.dart';
-import 'package:coffee_card/reusabul%20widget/styled_button.dart';
-import 'package:coffee_card/screens/order_confirmation.dart';
 import 'package:flutter/material.dart';
 
-class CustomizeDrink extends StatelessWidget {
-  final String drinkName;
-  const CustomizeDrink({super.key, required this.drinkName});
+class OrderConfirmation extends StatelessWidget {
+  final int strength;
+  final int suger;
+  final String drink;
+  const new({
+    required this.strength,
+    required this.suger,
+    required this.drink,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +22,21 @@ class CustomizeDrink extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[300],
-            child: StyledBodyText("customize your $drinkName"),
+            child: StyledBodyText("confirm your $drink order"),
           ),
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[200],
-            child: CoffeePrefs(drink: drinkName),
+            child: StyledBodyText(
+              'strength :$strength , suger:$suger',
+              middle: false,
+            ),
           ),
-
+          Container(
+            padding: EdgeInsets.all(20),
+            color: Colors.brown[100],
+            child: Text('form for selecting cash or card gose here'),
+          ),
           Expanded(
             child: Image.asset(
               "assets/img/coffee_bg.jpg",

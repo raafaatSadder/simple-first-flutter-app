@@ -10,7 +10,6 @@ class StyledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: child,
       style: TextButton.styleFrom(
         backgroundColor: Colors.brown[700],
         foregroundColor: Colors.white,
@@ -18,6 +17,7 @@ class StyledButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
       ),
+      child: child,
     );
   }
 }
